@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:id="@+id/logoIvSignUp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="600dp"
+        android:contentDescription="Logo"
+        android:src="@drawable/search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/idEdt"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:background="@drawable/button_design"
+        android:hint="ID"
+        android:inputType="text"
+        android:paddingLeft="10dp"
+        android:textColorHint="#2196F3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoIvSignUp" />
+
+    <EditText
+        android:id="@+id/pswEdt"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:background="@drawable/button_design"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColorHint="#2196F3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idEdt" />
+
+    <EditText
+        android:id="@+id/rePswEdt"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:background="@drawable/button_design"
+        android:hint="RE - Password"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textColorHint="#2196F3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pswEdt" />
+
+    <EditText
+        android:id="@+id/phonNumEdt"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:background="@drawable/button_design"
+        android:hint="PhonNumber"
+        android:inputType="phone"
+        android:paddingLeft="10dp"
+        android:textColorHint="#2196F3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rePswEdt" />
+
+    <Button
+        android:id="@+id/pnAuthBtn"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/edittext_design"
+        android:gravity="center"
+        android:paddingLeft="10dp"
+        android:text="Auth"
+        android:textColor="#FFFFFF"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phonNumEdt" />
+
+    <EditText
+        android:id="@+id/authEdt"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/button_design"
+        android:hint="AuthNum"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textColorHint="#2196F3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/pnAuthBtn"
+        app:layout_constraintTop_toBottomOf="@id/phonNumEdt" />
+
+    <Button
+        android:id="@+id/signUpBtn"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:background="@drawable/edittext_design"
+        android:gravity="center"
+        android:text="SignUP"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pnAuthBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
