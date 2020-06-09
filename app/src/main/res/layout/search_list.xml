@@ -10,37 +10,34 @@
     android:orientation="vertical"
     app:cardCornerRadius="20dp">
 
-    <ImageView
-        android:id="@+id/card_view_Image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:src="@mipmap/ic_launcher" />
-
     <TextView
+        android:textColor="#000000"
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="20dp"
-        android:text="학교이름" />
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="13dp"
+        android:text="학교이름"
+        android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/PN"
+        android:id="@+id/EngName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="45dp"
-        android:text="전화번호" />
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="36dp"
+        android:text="학교 영어이름"
+        android:textSize="9sp" />
 
     <TextView
-        android:id="@+id/introduce"
+        android:id="@+id/address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="105dp"
-        android:text="소개" />
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="50dp"
+        android:text="학교 주소"
+        android:textSize="9sp"
+        android:layout_marginBottom="13dp"/>
 
 
 </androidx.cardview.widget.CardView>
