@@ -1,9 +1,9 @@
 package com.example.joinapplication
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.joinapplication.Data.Adapter
@@ -30,7 +30,7 @@ class SearchActivity : AppCompatActivity() {
         recycler.layoutManager = LinearLayoutManager(this)
         val mAdapter = Adapter(this, School)
         recycler.adapter = mAdapter
-        Log.d( "Response:","Successful")
+        Log.d("Response:", "Successful")
     }
 
     private fun loadData() {
@@ -44,7 +44,21 @@ class SearchActivity : AppCompatActivity() {
                 call: Call<infoFirst>,
                 response: Response<infoFirst>
             ) {
-                Toast.makeText(applicationContext, response.body()!!.schoolList.toString(), Toast.LENGTH_SHORT).show()
+                var School : ArrayList<Row> = arrayListOf()
+                val sList = response.body()!!.schoolList.toString().split("Row")
+                for (a in 1..(sList.size -1 )) {
+                    var str = sList[a].replace("(", "")
+                    str = str.replace(")", "")
+                    str = str.replace("]", "")
+                    var sList_s = str.split(",")
+                    var info: ArrayList<String> = arrayListOf("a")
+                    for (a in 0..(sList_s.size-1)) {
+                        info.addAll(sList_s[a].split("="))
+                    }
+                    val r:Row = Row(info[2],info[4],info[6],info[8],info[10])
+                    School.add(r)
+                }
+                setAdapter(School)
             }
         })
     }

@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun clickEvent(view: View) {
-        val intent = Intent(baseContext, LoginActivity::class.java)
+        val intent = Intent(baseContext, SearchActivity::class.java)
         startActivity(intent)
         finish()}
 
