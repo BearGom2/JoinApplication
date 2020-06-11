@@ -16,7 +16,7 @@ data class SchoolInfo(
 )
 
 data class Row(
-    @SerializedName("SCHUL_KND_SC_NM")
+    @SerializedName("HS_SC_NM")
     @Expose
     val SchoolType: String,
     @SerializedName("ORG_RDNMA")
