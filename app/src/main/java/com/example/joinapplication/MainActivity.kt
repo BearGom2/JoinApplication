@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.joinapplication.Flagment.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.main_flagment.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,10 +31,13 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
     fun clickEvent(view: View) {
         val intent = Intent(baseContext, SearchActivity::class.java)
-        startActivity(intent)
-        finish()}
+        if (testText.length() > 0) {
+            intent.putExtra("SearchData", testText.text.toString())
+            startActivity(intent)
+            finish()
+        }
+    }
 
 }
