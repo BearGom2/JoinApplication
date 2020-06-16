@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.example.joinapplication.Flagment.ViewPagerAdapter
+import com.example.joinapplication.Adapter.ViewPagerAdapter_Main
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.main_flagment.*
@@ -15,26 +15,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var mTablayout: TabLayout = tablayout
+        var mTablayout: TabLayout = tablayout_Main
 
 
-        val fmAdapter = ViewPagerAdapter(supportFragmentManager)
-        ViewPager.adapter = fmAdapter
-        tablayout.setupWithViewPager(ViewPager)
-
-        mTablayout.getTabAt(0)?.setIcon(R.drawable.baseline_home)
-        mTablayout.getTabAt(1)?.setIcon(R.drawable.search)
-        mTablayout.getTabAt(2)?.setIcon(R.drawable.chat)
-        mTablayout.getTabAt(3)?.setIcon(R.drawable.account_circle)
-        mTablayout.getTabAt(4)?.setIcon(R.drawable.settings)
+        val fmAdapter = ViewPagerAdapter_Main(
+            supportFragmentManager
+        )
+        viewPager_Main.adapter = fmAdapter
+        tablayout_Main.setupWithViewPager(viewPager_Main)
 
     }
 
-
     fun clickEvent(view: View) {
         val intent = Intent(baseContext, SearchActivity::class.java)
-        if (testText.length() > 0) {
-            intent.putExtra("SearchData", testText.text.toString())
+        if (search_Edt_MainFlag.length() > 0) {
+            intent.putExtra("SearchData", search_Edt_MainFlag.text.toString())
             startActivity(intent)
             finish()
         }

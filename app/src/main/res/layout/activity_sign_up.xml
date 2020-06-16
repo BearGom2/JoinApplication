@@ -6,108 +6,190 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivity">
 
-    <ImageView
-        android:id="@+id/logoIvSignUp"
+    <TextView
+        android:id="@+id/id_Tv_SignUp"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="600dp"
-        android:contentDescription="Logo"
-        android:src="@drawable/search"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="18dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="78dp"
+        android:text="아이디"
+        android:textColor="#000000"
+        android:textSize="12sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/idEdt"
+        android:id="@+id/id_Edt_SignUp"
         android:layout_width="0dp"
         android:layout_height="33dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="120dp"
         android:background="@drawable/edittext_design"
-        android:hint="ID"
         android:inputType="text"
         android:paddingLeft="10dp"
         android:textColorHint="#8c7d30c9"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logoIvSignUp" />
+        app:layout_constraintTop_toBottomOf="@id/id_Tv_SignUp" />
 
-    <EditText
-        android:id="@+id/pswEdt"
+    <Button
+        android:id="@+id/overCheck_Btn_Signup"
         android:layout_width="0dp"
         android:layout_height="33dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="102dp"
+        android:layout_marginRight="40dp"
         android:background="@drawable/edittext_design"
-        android:hint="Password"
+        android:gravity="center"
+        android:text="중복확인"
+        android:textColor="#000000"
+        app:layout_constraintLeft_toRightOf="@id/id_Edt_SignUp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/psw_Tv_SignUp"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="12dp"
+        android:text="비밀번호"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_Edt_SignUp" />
+
+    <EditText
+        android:id="@+id/psw_Edt_SignUp"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/edittext_design"
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColorHint="#8c7d30c9"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/idEdt" />
+        app:layout_constraintTop_toBottomOf="@id/psw_Tv_SignUp" />
+
+    <TextView
+        android:id="@+id/reEnter_Tv_SignUp"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="12dp"
+        android:text="비밀번호 확인"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/psw_Edt_SignUp" />
 
     <EditText
-        android:id="@+id/rePswEdt"
+        android:id="@+id/reEnter_Edt_SignUp"
         android:layout_width="0dp"
         android:layout_height="33dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="40dp"
         android:background="@drawable/edittext_design"
-        android:hint="RE - Password"
         android:inputType="textPassword"
         android:paddingLeft="10dp"
         android:textColorHint="#8c7d30c9"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pswEdt" />
+        app:layout_constraintTop_toBottomOf="@id/reEnter_Tv_SignUp" />
+
+    <TextView
+        android:id="@+id/phoneNum_Tv_SignUp"
+        android:layout_width="0dp"
+        android:layout_height="18dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="12dp"
+        android:text="전화번호"
+        android:textColor="#000000"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reEnter_Edt_SignUp" />
 
     <EditText
-        android:id="@+id/phonNumEdt"
+        android:id="@+id/phoneNum_Edt_SignUp"
         android:layout_width="0dp"
         android:layout_height="33dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="120dp"
         android:background="@drawable/edittext_design"
-        android:hint="PhonNumber"
-        android:inputType="phone"
+        android:hint=""
+        android:inputType="text"
         android:paddingLeft="10dp"
         android:textColorHint="#8c7d30c9"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rePswEdt" />
+        app:layout_constraintTop_toBottomOf="@id/phoneNum_Tv_SignUp" />
 
     <Button
-        android:id="@+id/pnAuthBtn"
+        android:id="@+id/phoneNumAuth_Btn_SignUp"
         android:layout_width="0dp"
         android:layout_height="33dp"
-        android:layout_marginRight="50dp"
-        android:background="@drawable/button_design"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/edittext_design"
         android:gravity="center"
-        android:paddingLeft="10dp"
-        android:text="Auth"
-        android:textColor="#FFFFFF"
+        android:text="인증"
+        android:textColor="#000000"
+        app:layout_constraintLeft_toRightOf="@id/phoneNum_Edt_SignUp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/phonNumEdt" />
+        app:layout_constraintTop_toBottomOf="@id/phoneNum_Tv_SignUp" />
 
     <EditText
-        android:id="@+id/authEdt"
+        android:id="@+id/reEnterPN_Edt_SignUp"
         android:layout_width="0dp"
         android:layout_height="33dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="120dp"
         android:background="@drawable/edittext_design"
-        android:hint="AuthNum"
-        android:inputType="number"
+        android:hint=""
+        android:inputType="text"
         android:paddingLeft="10dp"
         android:textColorHint="#8c7d30c9"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/pnAuthBtn"
-        app:layout_constraintTop_toBottomOf="@id/phonNumEdt" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneNum_Edt_SignUp" />
 
     <Button
-        android:id="@+id/signUpBtn"
+        android:id="@+id/numAuth_Btn_SignUp"
         android:layout_width="0dp"
         android:layout_height="33dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/edittext_design"
+        android:gravity="center"
+        android:text="중복확인"
+        android:textColor="#000000"
+        app:layout_constraintLeft_toRightOf="@id/reEnterPN_Edt_SignUp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneNum_Edt_SignUp" />
+
+    <Button
+        android:id="@+id/signUp_Btn_SignUp"
+        android:layout_width="0dp"
+        android:layout_height="37dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="227dp"
         android:background="@drawable/button_design"
         android:gravity="center"
-        android:text="SignUP"
+        android:text="회원가입"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pnAuthBtn" />
+        app:layout_constraintTop_toBottomOf="@id/reEnterPN_Edt_SignUp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

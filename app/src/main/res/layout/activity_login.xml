@@ -7,22 +7,20 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:id="@+id/logoIvLogin"
+        android:id="@+id/logo_Iv_Login"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="97dp"
         android:layout_marginLeft="125dp"
         android:layout_marginTop="160dp"
         android:layout_marginRight="128dp"
-        android:layout_marginBottom="383dp"
         android:contentDescription="Logo"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/idEdt"
+        android:id="@+id/id_Edt_Login"
         android:layout_width="0dp"
         android:layout_height="34dp"
         android:layout_marginLeft="40dp"
@@ -36,10 +34,10 @@
         android:textSize="15sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/logoIvLogin" />
+        app:layout_constraintTop_toBottomOf="@id/logo_Iv_Login" />
 
     <EditText
-        android:id="@+id/pswEdt"
+        android:id="@+id/psw_Edt_Login"
         android:layout_width="0dp"
         android:layout_height="34dp"
         android:layout_marginLeft="40dp"
@@ -47,16 +45,16 @@
         android:layout_marginRight="40dp"
         android:background="@drawable/edittext_design"
         android:hint="비밀번호"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:paddingLeft="9dp"
         android:textColorHint="#8c7d30c9"
         android:textSize="15sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/idEdt" />
+        app:layout_constraintTop_toBottomOf="@id/id_Edt_Login" />
 
     <Button
-        android:id="@+id/loginBtn"
+        android:id="@+id/login_Btn_Login"
         android:layout_width="0dp"
         android:layout_height="33dp"
         android:layout_marginLeft="40dp"
@@ -69,10 +67,10 @@
         android:textSize="17sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/pswEdt" />
+        app:layout_constraintTop_toBottomOf="@id/psw_Edt_Login" />
 
     <TextView
-        android:id="@+id/signUpTv"
+        android:id="@+id/signUp_Tv_Login"
         android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_marginLeft="154dp"
@@ -84,16 +82,16 @@
         android:text="회훤가입"
         android:textColor="#73000000"
         android:textSize="12sp"
-        app:layout_constraintRight_toLeftOf="@id/findIdPwsTv"
-        app:layout_constraintTop_toBottomOf="@id/loginBtn" />
+        app:layout_constraintRight_toLeftOf="@id/findAccount_Tv_Login"
+        app:layout_constraintTop_toBottomOf="@id/login_Btn_Login" />
 
     <TextView
-        android:id="@+id/findIdPwsTv"
+        android:id="@+id/findAccount_Tv_Login"
         android:layout_width="wrap_content"
         android:layout_height="18dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="40dp"
         android:layout_marginTop="9dp"
+        android:layout_marginRight="40dp"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
@@ -101,6 +99,6 @@
         android:textColor="#73000000"
         android:textSize="12sp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginBtn" />
+        app:layout_constraintTop_toBottomOf="@id/login_Btn_Login" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,18 +7,18 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBar"
+        android:id="@+id/appBar_Main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Widget.Design.TabLayout"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tablayout"
+            android:id="@+id/tablayout_Main"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/edittext_design"
+            app:layout_constraintTop_toTopOf="parent"
             app:tabGravity="fill"
             app:tabIconTint="#ffffff"
             app:tabIndicatorColor="#00000000"
@@ -26,10 +26,10 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/ViewPager"
+        android:id="@+id/viewPager_Main"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/appBar"
+        app:layout_constraintBottom_toTopOf="@id/appBar_Main"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
