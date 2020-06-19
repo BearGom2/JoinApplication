@@ -130,8 +130,10 @@ class SearchActivity : AppCompatActivity() {
             for (a in 0..(sList_s.size - 1)) {
                 info.addAll(sList_s[a].split("="))
             }
-            val r: ClassRow = ClassRow(info[2], info[4], info[6])
-            Class.add(r)
+            if (info[8]=="1"){
+                val r: ClassRow = ClassRow(info[2], info[4], info[6],info[8])
+                Class.add(r)
+            }
         }
         return Class
     }

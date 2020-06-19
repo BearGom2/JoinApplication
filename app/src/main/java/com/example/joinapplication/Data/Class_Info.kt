@@ -25,5 +25,8 @@ data class ClassRow(
     val grade: String,
     @SerializedName("DDDEP_NM")
     @Expose
-    val departmentName: String
+    val departmentName: String,
+    @SerializedName("CLASS_NM")
+    @Expose
+    val classNum: String
 )

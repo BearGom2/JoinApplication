@@ -29,6 +29,7 @@ class LoginActivity : AppCompatActivity() {
 
                 override fun onResponse(call: Call<Void>, response: Response<Void>) {
                     if (response.code() == 200) {
+                        Toast.makeText(applicationContext, response.code().toString(), Toast.LENGTH_SHORT).show()
                         val intent = Intent(baseContext, MainActivity::class.java)
                         startActivity(intent)
                         finish()

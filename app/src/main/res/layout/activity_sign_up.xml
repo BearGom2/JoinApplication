@@ -170,7 +170,7 @@
         android:layout_marginRight="40dp"
         android:background="@drawable/edittext_design"
         android:gravity="center"
-        android:text="중복확인"
+        android:text="번호인증"
         android:textColor="#000000"
         app:layout_constraintLeft_toRightOf="@id/reEnterPN_Edt_SignUp"
         app:layout_constraintRight_toRightOf="parent"
